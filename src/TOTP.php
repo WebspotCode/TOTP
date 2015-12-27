@@ -158,7 +158,8 @@ class TOTP
 
         // Go byte by byte through the secret and build the output binary string
         $binaryString = '';
-        for ($byte = 0; $byte < count($secret); $byte = $byte + 8) {
+        $secretLength = count($secret);
+        for ($byte = 0; $byte < $secretLength; $byte = $byte + 8) {
             $string = '';
             for ($bit = 0; $bit < 8; $bit++) {
                 $char = base_convert($base32charsFlipped[$secret[$byte + $bit]], 10, 2);
