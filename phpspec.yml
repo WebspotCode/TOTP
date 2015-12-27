@@ -1,0 +1,13 @@
+suites:
+    acme_suite:
+        namespace: Spot\TOTP
+        psr4_prefix: Spot\TOTP
+
+extensions:
+    - PhpSpec\Extension\CodeCoverageExtension
+
+code_coverage:
+    format:
+        - clover
+    output:
+        clover: coverage.xml
