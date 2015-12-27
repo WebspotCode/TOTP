@@ -15,9 +15,6 @@ class TOTP
     /** @var  int */
     private $codeLength = 6;
 
-    /**
-     * @param  int $codeLength
-     */
     public function __construct(int $codeLength = 6)
     {
         if (!is_int($codeLength) || $codeLength < 6) {
@@ -26,18 +23,14 @@ class TOTP
         $this->codeLength = $codeLength;
     }
 
-    /** @return  int */
     protected function getCodeLength() : int
     {
         return $this->codeLength;
     }
 
     /**
-     * Create new secret.
+     * Create new secret
      * 16 characters, randomly chosen from the allowed base32 characters.
-     *
-     * @param   int $secretLength
-     * @return  string
      */
     public function createSecret(int $secretLength = 16) : string
     {
