@@ -14,8 +14,7 @@
         "bin-dir": "bin"
     },
     "require-dev": {
-        "phpspec/phpspec": "dev-master",
-        "phpspec/prophecy": "dev-master",
+        "phpspec/phpspec": "^2.2",
         "henrikbjorn/phpspec-code-coverage": "^2.0"
     },
     "autoload": {
